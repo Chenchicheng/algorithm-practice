@@ -1,3 +1,4 @@
+import sort.HeapSort;
 import sort.MergeSort;
 import sort.QuickSort;
 
@@ -71,9 +72,9 @@ public class LogarithmicDetector {
             /**
              * 需要测试的代码
              */
-            MergeSort.mergeSort(arr1, 0, arr1.length - 1);
-            MergeSort.mergeSort(arr2, 0, arr2.length - 1);
-            MergeSort.mergeSort(arr3, 0, arr3.length - 1);
+            HeapSort.heapSort(arr1);
+            HeapSort.heapSort(arr2);
+            HeapSort.heapSort(arr3);
             if (!isEqual(arr1, arr2) || !isEqual(arr2, arr3)) {
                 succeed = false;
                 printArray(arr1);
