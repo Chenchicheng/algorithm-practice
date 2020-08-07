@@ -3,7 +3,7 @@ package sort;
 /**
  * @author chicheng
  * @date 2020/8/5 21:55
- * @description 堆排序
+ * @description 堆排序 O(N*logN), 不稳定
  * 排序原理：
  *      1、先让整个数组变成大根堆结构
  *          1、由上至下建立大根堆(O(N*logN))

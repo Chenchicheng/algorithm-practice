@@ -3,7 +3,7 @@ package sort;
 /**
  * @author chicheng
  * @date 2020/8/1 16:47
- * @description 快速排序
+ * @description 快速排序 O(N*logN), 不稳定
  */
 public class QuickSort {
 

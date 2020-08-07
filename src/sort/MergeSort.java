@@ -3,7 +3,7 @@ package sort;
 /**
  * @author chicheng
  * @date 2020/8/1 17:35
- * @description 归并排序
+ * @description 归并排序 O(N*logN), 稳定
  */
 public class MergeSort {
 
