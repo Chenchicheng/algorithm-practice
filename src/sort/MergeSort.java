@@ -7,6 +7,12 @@ package sort;
  */
 public class MergeSort {
 
+    /**
+     * 归并排序， 递归方式
+     * @param a
+     * @param left  数组的最左下标
+     * @param right 数组的最右下边
+     */
     public static void mergeSort(int a[], int left, int right) {
         if (a == null || a.length < 2) {
             return;
@@ -38,6 +44,45 @@ public class MergeSort {
         }
         for (i = 0; i < temp.length; i++) {
             a[left + i] = temp[i];
+        }
+    }
+
+    /**
+     * 非递归方式实现
+     * @param a
+     */
+    public static void mergeSort2(int a[]) {
+        int n = a.length;
+        int mergeSize = 1;
+        while (mergeSize < n) {
+            int l = 0;
+            while (l < n) {
+                int m = l + mergeSize - 1;
+                if (m >= n) {
+                    break;
+                }
+                int r = Math.min(l + mergeSize, n - 1);
+                merge(a, l, m, r);
+                l = r + 1;
+            }
+
+            /**
+             * 防止数组溢出
+             */
+            if (mergeSize > n / 2) {
+                break;
+            }
+            mergeSize = mergeSize *2;
+        }
+    }
+
+    public static void main(String args[]) {
+        int[] a = {1,2,3,5,1,6,4,8};
+
+        mergeSort2(a);
+
+        for (int j : a) {
+            System.out.println(j + " ");
         }
     }
 }
